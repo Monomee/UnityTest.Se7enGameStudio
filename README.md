@@ -9,3 +9,11 @@
 - use state to manage/change animation 
 2. Cinemachine:
 - using Virtual Camera to follow player
+
+# Phase 2:
+- Add DOTween for ball movement  
+- Add animation Kick for player  
+- Use animation event (in Kick anim) to Shoot Ball  
+- Add Kick and Auto Kick function (ball flies to nearest goal)  
+- Use cinemachine to follow ball  
+- Flow: Kick -> Set target ball -> Camera follow ball -> play animation Kick  -> shoot -> goal and play particle system -> camera return back to player / ball return back to spawn position  
