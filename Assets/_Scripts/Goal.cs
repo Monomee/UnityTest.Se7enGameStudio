@@ -31,6 +31,8 @@ public class Goal : MonoBehaviour
 
         CameraController.instance.DetachBallFromCamera();
 
+        TrailRenderer trail = ballOb.GetComponent<TrailRenderer>();
+        trail.enabled = false;
         Rigidbody rb = ballOb.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -42,6 +44,7 @@ public class Goal : MonoBehaviour
         ballOb.transform.position = BallController.instance.spawnPoint.position;
 
         if (rb != null) rb.isKinematic = false;
+        if (!trail.enabled) trail.enabled = true;
 
         yield return new WaitForSeconds(2f);
 

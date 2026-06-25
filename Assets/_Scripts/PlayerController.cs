@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -157,5 +158,8 @@ public class PlayerController : MonoBehaviour
                 state = isRunning ? PlayerState.Running : PlayerState.Moving;
         }
     }
+
+    public void SetTurnModel(Toggle toggle) => turnVisualWhenMoveBackward = toggle.isOn;
+    public void SetReverseInput(Toggle toggle) => reverseInputWhenMoveBackward = toggle.isOn;
 }
 public enum PlayerState { Idle, Moving, Running, Jumping, Falling, Kick };

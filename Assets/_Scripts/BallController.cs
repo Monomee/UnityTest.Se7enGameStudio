@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BallController : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class BallController : MonoBehaviour
     {
         if (goal1 == null || goal2 == null) return;
 
+        ball = null;
         ball = GetFurthestBall().transform;
 
         CameraController.instance.ChangeCamera();
@@ -93,4 +95,5 @@ public class BallController : MonoBehaviour
         }
         return furthestBall.transform;
     }
+    public void SetShootStyle(Toggle toggle) => shootStraight = toggle.isOn;
 }

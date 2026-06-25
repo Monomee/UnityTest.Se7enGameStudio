@@ -57,7 +57,7 @@ Material:
     - _MaskPower: 0
     - _NoiseScale: 10
     m_Colors:
-    - _DotColor: {r: 0.015874239, g: 0.07941215, b: 0.0885616, a: 1}
+    - _DotColor: {r: 0.054823704, g: 0.24169159, b: 0.27672935, a: 1}
     - _DotTiling: {r: 30, g: 15, b: 0, a: 0}
     - _HexTiling: {r: 12, g: 10, b: 0, a: 0}
     - _NoiseSpeed: {r: 0, g: 0.2, b: 0, a: 0}
