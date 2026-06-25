@@ -35,10 +35,10 @@ public class AnimationController : MonoBehaviour
                 ChangeAnimation("a_Idle");
                 break;
             case PlayerState.Moving:
-                ChangeAnimation("a_Walking");
+                ChangeAnimation("a_Walking", 0);
                 break;
             case PlayerState.Running:
-                ChangeAnimation("a_Running");
+                ChangeAnimation("a_Running", 0);
                 break;
             case PlayerState.Jumping:
                 ChangeAnimation("Jump", 0);
