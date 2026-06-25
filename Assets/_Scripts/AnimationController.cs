@@ -46,6 +46,9 @@ public class AnimationController : MonoBehaviour
             case PlayerState.Falling:
                 ChangeAnimation("FallingToLanding");
                 break;
+            case PlayerState.Kick:
+                ChangeAnimation("Kick");
+                break;
             default:
                 break;
         }
