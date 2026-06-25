@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject visualCharacter;
     [SerializeField] private Rigidbody rb;
 
+    public bool isKicking = false;
+
     // for in-class use
     private Vector2 inputVector;
 
@@ -138,6 +140,11 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdatePlayerState()
     {
+        if (isKicking)
+        {
+            state = PlayerState.Kick;
+            return;
+        }
         if (inputVector == Vector2.zero)
         {
             state = PlayerState.Idle;
@@ -151,4 +158,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
-public enum PlayerState { Idle, Moving, Running, Jumping, Falling };
+public enum PlayerState { Idle, Moving, Running, Jumping, Falling, Kick };
