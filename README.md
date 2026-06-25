@@ -17,3 +17,15 @@
 - Add Kick and Auto Kick function (ball flies to nearest goal)  
 - Use cinemachine to follow ball  
 - Flow: Kick -> Set target ball -> Camera follow ball -> play animation Kick  -> shoot -> goal and play particle system -> camera return back to player / ball return back to spawn position  
+
+# Phase 3
+1. Wall  
+- add wall around (player can not go outside football field  
+- create barrier material by shader graph  
+2. Reset button  
+- add reset button  
+- add pause/setting UI  
+3. Polish  
+- arrange hierarchy  
+- fix camera follow ball 's view  
+- add trail to ball  
