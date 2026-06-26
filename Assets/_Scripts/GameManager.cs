@@ -24,4 +24,8 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = isPausing? 0f : 1f;
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
