@@ -28,4 +28,6 @@
 3. Polish  
 - arrange hierarchy  
 - fix camera follow ball 's view  
-- add trail to ball  
+- add trail to ball
+- add dust particle system  
+- add icon for game
