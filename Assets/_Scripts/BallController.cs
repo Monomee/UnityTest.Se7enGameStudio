@@ -21,6 +21,7 @@ public class BallController : MonoBehaviour
 
     [Header("Binding")]
     public PlayerController player;
+    public Transform visualPlayer;
     public Transform goal1;
     public Transform goal2;
     public Transform spawnPoint;
@@ -62,7 +63,8 @@ public class BallController : MonoBehaviour
             ball.DOMove(target, speedWhenShootStraight)
             .SetSpeedBased()
             .SetEase(Ease.OutExpo)
-            .OnComplete(() => {
+            .OnComplete(() =>
+            {
                 player.isKicking = false;
             });
         }
