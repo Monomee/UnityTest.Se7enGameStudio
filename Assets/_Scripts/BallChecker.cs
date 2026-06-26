@@ -12,7 +12,7 @@ public class BallChecker : MonoBehaviour
         Rigidbody rb = other.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         kickButton.SetActive(true);
-        BallController.instance.ball = other.transform;
+        BallController.instance.nearBall = other.transform;
     }
     private void OnTriggerExit(Collider other)
     {
@@ -20,6 +20,6 @@ public class BallChecker : MonoBehaviour
         Rigidbody rb = other.GetComponent<Rigidbody>();
         rb.isKinematic = false;
         kickButton.SetActive(false);
-        BallController.instance.ball = null;
+        BallController.instance.nearBall = null;
     }
 }

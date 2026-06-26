@@ -25,8 +25,8 @@ public class CameraController : MonoBehaviour
     // method to use
     public void ChangeCameraToTargetBall()
     {
-        followBallCamera.Follow = BallController.instance.ball;
-        followBallCamera.LookAt = BallController.instance.ball;
+        followBallCamera.Follow = BallController.instance.targetBall;
+        followBallCamera.LookAt = BallController.instance.targetBall;
         followBallCamera.Priority = 11;
     }
     public void ChangeCameraBackToPlayer()
@@ -40,6 +40,11 @@ public class CameraController : MonoBehaviour
     }
     public void ChangeCamera()
     {
+        if (BallController.instance.targetBall == null)
+        {
+            BallController.instance.targetBall = BallController.instance.nearBall;
+        }
+
         StartCoroutine(ChangeCameraCoroutine());
     }
     private IEnumerator ChangeCameraCoroutine()
