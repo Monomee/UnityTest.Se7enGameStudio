@@ -31,3 +31,8 @@
 - add trail to ball
 - add dust particle system  
 - add icon for game
+- fix bug:
++ problem: when player gets close to a ball (called A), so there are 2 buttons: kick and auto kick, then click auto kick; instead of kick the furthest ball, A is kicked 
++ reason (maybe): when animation "kick" plays, collider can be triggered again, then target ball is reassigned, override previous target ball (the furthest)
++ solution: create new variable "nearBall", nearBall is ball near player, targetBall is ball that is kicked; auto kick: assign furthest ball to target ball; kick: when change camera, if target ball is null -> then assign near ball to target ball
+- add UI manager: manage 2 buttons (kick and auto kick), when click button, it will be turned off interactable, after shoot ball into goal, turn on again
